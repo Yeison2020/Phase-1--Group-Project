@@ -63,3 +63,10 @@ body {
       border-radius: 15px;
       margin: 5px;
   }
+  
+  .thumbnail {
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 15px;
+    margin: 5px;
+}

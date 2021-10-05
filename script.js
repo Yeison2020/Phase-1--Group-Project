@@ -1,7 +1,7 @@
 const btn_first = document.querySelectorAll(".side-btn");
 
 console.log(btn_first);
-
+console.log(apiKey)
 btn_first.forEach((el) =>
   el.addEventListener("click", (e) => {
     el.classList.add("btn-color");
@@ -13,7 +13,7 @@ btn_first.forEach((el) =>
 //----------------------------------------------------------\
 let counter = 5;
 fetch(
-  `https://api.nasa.gov/planetary/apod?start_date=2021-09-01&api_key=${key}`
+  `https://api.nasa.gov/planetary/apod?start_date=2021-09-01&api_key=${apiKey}`
 )
   .then((resp) => resp.json())
   .then((data) => {
