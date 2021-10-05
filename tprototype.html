@@ -43,10 +43,11 @@
         </span>
       </div>
     </header>
-    <div id="mainDisplay">
+    <div>
+      <div id='imageDisplay' class = 'displayWindow'>
         <h3 id = "imageTitle">Example Image Title</h3>
         <img id = "mainImage" src = "Galaxy Imgs/1.jpg">
-        <p id = "mainDescription">Example image description</p>
+        <p id = "imageDescription">Example image description</p>
         <form>
             <label for="commentText">Comment</label><br>
             <input type="text" id="commentText" name="commentText">
@@ -57,9 +58,26 @@
             <li>Comments Go Here!</li>
             <li>Just Like So!</li>
         </ul>
+      </div>
+      <div id = 'videoDisplay' class = 'displayWindow'>
+        <h3 id = "videoTitle">Example Video Title</h3>
+        <video controls id = "mainVideo">
+          <source id = 'videoSrc' src = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
+          </video>
+        <p id = "videoDescription">Example video description</p>
+        <form>
+            <label for="commentText">Comment</label><br>
+            <input type="text" id="videoCommentText" name="commentText">
+            <input type="submit">
+            <button id = "videoLikeBttn" type="button">Like</button>
+        </form>
+        <ul id = "commentContainer">
+            <li>Comments Go Here!</li>
+            <li>Just Like So!</li>
+      </div>
     </div>
     <div id = "thumbnailContainer">
-        <div class = "example">
+        <!-- <div class = "example">
             <img class = "thumbnailImage" src = "Galaxy Imgs/2.jpg">
         </div>
         <div class = "example">
@@ -70,7 +88,7 @@
         </div>
         <div class = "example">
             <img class = "thumbnailImage" src = "Galaxy Imgs/2.jpg">
-        </div>
+        </div> -->
     </div>
   </body>
 </html>
