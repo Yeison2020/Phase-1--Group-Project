@@ -23,7 +23,7 @@ p {
   padding-left: 25px;
 }
 
-#imageTitle {
+h3 {
   text-align: center;
   padding-bottom: 10px;
   padding-top: 10px;
@@ -60,11 +60,6 @@ p {
   margin-top: 250px;
 }
 
-#imageDisplay {
-  border: 3px solid red;
-  border-radius: 15px;
-}
-
 #mainImage {
   max-width: 90%;
   max-height: 600px;
@@ -73,6 +68,14 @@ p {
   margin: auto;
   display: block;
 }
+
+#videoSrc {
+  width: 854px;
+  height: 480px;
+  margin: auto;
+  display: block;
+}
+
 .thumbnailImage {
   width: 100%;
   height: 100%;
@@ -99,6 +102,12 @@ p {
   max-width: 200px;
   border-radius: 15px;
   margin: 5px;
+}
+
+#dateDiv {
+display: flex;
+justify-content: center;
+background-color: #335ae5;
 }
 
 .videoThumbnail {

@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap"
       rel="stylesheet"
     />
-    <!-- <script defer src="secretKey.js"></script> -->
+    <script defer src="secretKey.js"></script>
     <script defer src="tprototype.js"></script>
 
     <title>Nasa  Daily Pictures</title>
@@ -59,17 +59,27 @@
         <form id='videoForm'>
             <label for="commentText">Comment</label><br>
             <input type="text" id="videoCommentText" name="commentText">
-            <input type="submit">
+            <button type="submit" class="btn btn-success">Submit</button>
             <button id ='video-like-btn'type="button" class="btn btn-danger">Like &starf;</button>
             <label  id='video-likesImgs' type="text" class="btn btn-light">0 Likes</label>
         </form>
         
-        <ul id = "commentContainer">
-            <li>Comments Go Here!</li>
-            <li>Just Like So!</li>
+        <ul id = "videoCommentContainer">
+            <!-- <li>Comments Go Here!</li>
+            <li>Just Like So!</li> -->
       </div>
     </div>
+    <div id = 'dateDiv'>
+      <form id = 'dateRange'>
+        <label for = 'begin'>Start Date</label>
+        <input type = 'date' id = 'begin' min = '2021-01-01' max = '2021-10-06'>
+        <label for = 'end'>End Date</label>
+        <input type = 'date' id = 'end' min = '2021-01-02' max = '2021-10-06' value = '2021-10-06'>
+        <button type = 'submit' class="btn btn-success">Submit</button>
+      </form>
+    </div>
     <div id = "thumbnailContainer">
+      
         <!-- <div class = "example">
             <img class = "thumbnailImage" src = "Galaxy Imgs/2.jpg">
         </div>
