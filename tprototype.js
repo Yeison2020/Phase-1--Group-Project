@@ -77,12 +77,13 @@ commentForm.addEventListener("submit", (e) => {
   e.target.reset();
 });
 
-// const likesButton = document.getElementById("like-btn");
-// likesButton.addEventListener("click", () => increment());
+const likesButton = document.getElementById("like-btn");
+likesButton.addEventListener("click", () => increment());
 
-// const increment = () => {
-//   let likes = document.getElementById("likesImgs").textContent;
-//   let current = likes.replace("Likes", "");
-//   let string = parseInt(current) + 1;
-//   likes = `${string} Likes`;
-// };
+const increment = () => {
+  let likes = document.getElementById("likesImgs").textContent;
+  let current = likes.replace("Likes", "");
+  let string = parseInt(current);
+  string++;
+  likes = document.getElementById("likesImgs").textContent = `${string} Likes`;
+};
