@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap"
       rel="stylesheet"
     />
-    <script defer src="secretKey.js"></script>
+    <!-- <script defer src="secretKey.js"></script> -->
     <script defer src="tprototype.js"></script>
 
     <title>Document</title>
@@ -48,15 +48,14 @@
         <h3 id = "imageTitle">Example Image Title</h3>
         <img id = "mainImage" src = "Galaxy Imgs/1.jpg">
         <p id = "imageDescription">Example image description</p>
-        <form>
+        <form id='comments'>
             <label for="commentText">Comment</label><br>
             <input type="text" id="commentText" name="commentText">
-            <input type="submit">
-            <button id = "likeBttn" type="button">Like</button>
+            <button type="submit" class="btn btn-success">Submit</button>
+            <button id ='like-btn'type="button" class="btn btn-danger">Like ♥</button>
+            <label  id='likesImgs' type="text" class="btn btn-light">0 Likes</label>
         </form>
         <ul id = "commentContainer">
-            <li>Comments Go Here!</li>
-            <li>Just Like So!</li>
         </ul>
       </div>
       <div id = 'videoDisplay' class = 'displayWindow'>
@@ -69,8 +68,8 @@
             <label for="commentText">Comment</label><br>
             <input type="text" id="videoCommentText" name="commentText">
             <input type="submit">
-            <button id = "videoLikeBttn" type="button">Like</button>
         </form>
+        
         <ul id = "commentContainer">
             <li>Comments Go Here!</li>
             <li>Just Like So!</li>
