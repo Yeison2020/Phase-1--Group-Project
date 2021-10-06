@@ -9,6 +9,8 @@ let videoDisplay = document.getElementById("videoDisplay");
 let imageDisplay = document.getElementById("imageDisplay");
 let videoSrc = document.getElementById("videoSrc");
 videoDisplay.style.display = "none";
+const imageLink = document.getElementById("imgLink");
+const videoLink = document.getElementById("videoLink");
 
 fetch(
   `https://api.nasa.gov/planetary/apod?start_date=2021-09-23&api_key=QRGi2r3XlHiGSpllFrbp6oSEiPxfoBG6pZKn9VKl`
@@ -51,12 +53,14 @@ makeThumbnail = (obj) => {
       mainImage.alt = obj.explanation;
       imageTitle.innerText = obj.title;
       imageDescription.innerText = obj.explanation;
+      imageLink.href = obj.hdurl;
     } else {
       imageDisplay.style.display = "none";
       videoDisplay.style.display = "block";
       videoSrc.src = obj.url;
       videoDescription.innerText = obj.explanation;
       videoTitle.innerText = obj.title;
+      videoLink.href = obj.url;
     }
   });
 };
@@ -96,5 +100,7 @@ const videoIncrement = () => {
   let current = likes.replace("Likes", "");
   let string = parseInt(current);
   string++;
-  likes = document.getElementById("video-likesImgs").textContent = `${string} Likes`;
+  likes = document.getElementById(
+    "video-likesImgs"
+  ).textContent = `${string} Likes`;
 };

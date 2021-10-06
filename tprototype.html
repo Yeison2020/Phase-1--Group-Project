@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel='icon' href='https://as2.ftcdn.net/v2/jpg/01/25/35/67/500_F_125356791_TIkKaeYi7GiOcSeompCX2ZtKhPovpoo8.jpg'>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,34 +21,20 @@
     <!-- <script defer src="secretKey.js"></script> -->
     <script defer src="tprototype.js"></script>
 
-    <title>Document</title>
+    <title>Nasa  Daily Pictures</title>
   </head>
   <body>
     <header id="header">
       <div id="main">
-        <h1>Welcome to The Nasa Daily Pictures</h1>
-        <span>
-          <button type="button" class="side-btn btn btn-outline-primary">
-            Random Pictures
-          </button>
-        </span>
-        <span>
-          <button type="button" class="side-btn btn btn-outline-primary">
-            Display all Pictures
-          </button>
-        </span>
-        <span>
-          <button type="button" class="side-btn btn btn-outline-primary">
-            Play Videos Galaxy
-          </button>
-        </span>
+        <h1 id="welcomeWord">Welcome to The Nasa Daily Pictures</h1>
       </div>
     </header>
     <div>
       <div id='imageDisplay' class = 'displayWindow'>
-        <h3 id = "imageTitle">Example Image Title</h3>
-        <img id = "mainImage" src = "Galaxy Imgs/1.jpg">
-        <p id = "imageDescription">Example image description</p>
+        <h3 id = "imageTitle">Image Title</h3>
+        <img id = "mainImage" src = "Galaxy Imgs/3.jpg">
+        <p id = "imageDescription">Image description</p>
+        <a id='imgLink' href=''>Image Link</a>
         <form id='comments'>
             <label for="commentText">Comment</label><br>
             <input type="text" id="commentText" name="commentText">
@@ -68,7 +55,8 @@
           src = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
           </video> -->
         <p id = "videoDescription">Example video description</p>
-        <form>
+        <a id='videoLink' href=''>Video Link</a>
+        <form id='videoForm'>
             <label for="commentText">Comment</label><br>
             <input type="text" id="videoCommentText" name="commentText">
             <input type="submit">

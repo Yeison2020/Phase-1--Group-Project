@@ -10,12 +10,36 @@ h1 {
 }
 p {
   text-align: justify;
-  line-height: 1.0;
+  line-height: 1;
   max-width: 80%;
-  margin:auto;
-  
+  margin: auto;
+}
+
+#comments {
+  padding-left: 25px;
+}
+
+#videoForm {
+  padding-left: 25px;
+}
+
+#imageTitle {
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#imageDescription {
+  padding-top: 10px;
+}
+
+#welcomeWord {
+  text-align: center;
+  font-size: 48px;
 }
 #main {
+  justify-content: center;
+  display: flex;
   width: 100%;
   height: 200px;
   margin-bottom: 100px;
@@ -43,7 +67,7 @@ p {
 
 #mainImage {
   max-width: 90%;
-  max-height: 90%;
+  max-height: 600px;
   border-radius: 15px;
   margin-bottom: 35px;
   margin: auto;
@@ -93,4 +117,19 @@ p {
 
 ul {
   list-style-type: none;
+}
+
+#videoLink {
+  margin-left: 10%;
+}
+#imgLink {
+  margin-left: 10%;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: red;
 }
