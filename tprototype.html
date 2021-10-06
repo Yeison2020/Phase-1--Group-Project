@@ -52,7 +52,7 @@
             <label for="commentText">Comment</label><br>
             <input type="text" id="commentText" name="commentText">
             <button type="submit" class="btn btn-success">Submit</button>
-            <button id ='like-btn'type="button" class="btn btn-danger">Like ♥</button>
+            <button id ='like-btn'type="button" class="btn btn-danger">Like &starf;</button>
             <label  id='likesImgs' type="text" class="btn btn-light">0 Likes</label>
         </form>
         <ul id = "commentContainer">
@@ -60,14 +60,20 @@
       </div>
       <div id = 'videoDisplay' class = 'displayWindow'>
         <h3 id = "videoTitle">Example Video Title</h3>
-        <video controls id = "mainVideo">
-          <source id = 'videoSrc' src = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
-          </video>
+        <iframe width="420" height="315" id="videoSrc"
+        src="">
+        </iframe>
+        <!-- <video controls id = "mainVideo">
+          <source id = 'videoSrc' type="video/ogg"
+          src = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
+          </video> -->
         <p id = "videoDescription">Example video description</p>
         <form>
             <label for="commentText">Comment</label><br>
             <input type="text" id="videoCommentText" name="commentText">
             <input type="submit">
+            <button id ='video-like-btn'type="button" class="btn btn-danger">Like &starf;</button>
+            <label  id='video-likesImgs' type="text" class="btn btn-light">0 Likes</label>
         </form>
         
         <ul id = "commentContainer">

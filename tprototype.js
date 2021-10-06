@@ -87,3 +87,14 @@ const increment = () => {
   string++;
   likes = document.getElementById("likesImgs").textContent = `${string} Likes`;
 };
+
+const videoLikesButton = document.getElementById("video-like-btn");
+videoLikesButton.addEventListener("click", () => videoIncrement());
+
+const videoIncrement = () => {
+  let likes = document.getElementById("video-likesImgs").textContent;
+  let current = likes.replace("Likes", "");
+  let string = parseInt(current);
+  string++;
+  likes = document.getElementById("video-likesImgs").textContent = `${string} Likes`;
+};
