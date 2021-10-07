@@ -36,6 +36,22 @@ h3 {
 #welcomeWord {
   text-align: center;
   font-size: 48px;
+  animation: moveWelcome 2s ease-in;
+}
+
+@keyframes moveWelcome {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 #main {
   justify-content: center;
@@ -105,9 +121,9 @@ h3 {
 }
 
 #dateDiv {
-display: flex;
-justify-content: center;
-background-color: #335ae5;
+  display: flex;
+  justify-content: center;
+  background-color: #335ae5;
 }
 
 .videoThumbnail {
