@@ -19,6 +19,7 @@ dateRange.addEventListener('submit', (e) => {
   e.preventDefault();
   const firstDate = document.getElementById('begin').value;
   const seccondDate = document.getElementById('end').value;
+  thumbnailContainer.innerHTML = '';
   fetch(
     `https://api.nasa.gov/planetary/apod?start_date=${firstDate}&end_date=${seccondDate}&api_key=${apiKey}`
   )
