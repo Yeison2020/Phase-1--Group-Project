@@ -13,12 +13,14 @@ const imageLink = document.getElementById("imgLink");
 const videoLink = document.getElementById("videoLink");
 let videoLikes = document.getElementById("video-likesImgs").textContent;
 let likes = document.getElementById("likesImgs").textContent;
-let dateRange = document.getElementById('dateRange');
+let dateRange = document.getElementById("dateRange");
 
-dateRange.addEventListener('submit', (e) => {
+const apiKey = "QRGi2r3XlHiGSpllFrbp6oSEiPxfoBG6pZKn9VKl";
+
+dateRange.addEventListener("submit", (e) => {
   e.preventDefault();
-  const firstDate = document.getElementById('begin').value;
-  const seccondDate = document.getElementById('end').value;
+  const firstDate = document.getElementById("begin").value;
+  const seccondDate = document.getElementById("end").value;
   fetch(
     `https://api.nasa.gov/planetary/apod?start_date=${firstDate}&end_date=${seccondDate}&api_key=${apiKey}`
   )
@@ -26,12 +28,8 @@ dateRange.addEventListener('submit', (e) => {
     .then((data) => {
       console.log(data);
       data.forEach((element) => makeThumbnail(element));
-    }
-  );
-
-})
-
-
+    });
+});
 
 //function to help limit the number of days a user can input at once. non-feature but saved for further study.
 // howManyDays = (day1, day2) => {
@@ -46,7 +44,6 @@ dateRange.addEventListener('submit', (e) => {
 //   let endDate = document.getElementById('end').value;
 //   console.log(howManyDays(startDate, endDate));
 // });
-
 
 //function that takes an object and creates a thumbnail.  checks to see if the object represents an image or a video. makes
 // apropriate thumbnail.
@@ -82,9 +79,8 @@ makeThumbnail = (obj) => {
       imageTitle.innerText = obj.title;
       imageDescription.innerText = obj.explanation;
       imageLink.href = obj.hdurl;
-      document.getElementById('commentContainer').innerHTML = '';
-      likes.textContent = '0 Likes';
-
+      document.getElementById("commentContainer").innerHTML = "";
+      likes.textContent = "0 Likes";
     } else {
       imageDisplay.style.display = "none";
       videoDisplay.style.display = "block";
@@ -92,8 +88,8 @@ makeThumbnail = (obj) => {
       videoDescription.innerText = obj.explanation;
       videoTitle.innerText = obj.title;
       videoLink.href = obj.url;
-      document.getElementById('videoCommentContainer').innerHTML = '';
-      videoLikes.textContent = '0 Likes';
+      document.getElementById("videoCommentContainer").innerHTML = "";
+      videoLikes.textContent = "0 Likes";
     }
   });
 };
@@ -120,7 +116,9 @@ const videoForm = document.getElementById("videoForm");
 
 videoForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const videoCommentContainer = document.getElementById("videoCommentContainer");
+  const videoCommentContainer = document.getElementById(
+    "videoCommentContainer"
+  );
 
   const makeEl = (e) => document.createElement(e);
   const li = makeEl("li");
@@ -157,24 +155,23 @@ const videoIncrement = () => {
   ).textContent = `${string} Likes`;
 };
 
-
-//Loads Default content from todays astronomy photo of the day. 
+//Loads Default content from todays astronomy photo of the day.
 fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
-.then(data => data.json())
-.then((todaysContent) => {
-  if (todaysContent.media_type === 'image') {
-    mainImage.src = todaysContent.hdurl;
-    mainImage.alt = todaysContent.explanation;
-    imageTitle.innerText = todaysContent.title;
-    imageDescription.innerText = todaysContent.explanation;
-    imageLink.href = todaysContent.hdurl;
-    console.log(todaysContent);
-  } else {
-    imageDisplay.style.display = "none";
+  .then((data) => data.json())
+  .then((todaysContent) => {
+    if (todaysContent.media_type === "image") {
+      mainImage.src = todaysContent.hdurl;
+      mainImage.alt = todaysContent.explanation;
+      imageTitle.innerText = todaysContent.title;
+      imageDescription.innerText = todaysContent.explanation;
+      imageLink.href = todaysContent.hdurl;
+      console.log(todaysContent);
+    } else {
+      imageDisplay.style.display = "none";
       videoDisplay.style.display = "block";
       videoSrc.src = todaysContent.url;
       videoDescription.innerText = todaysContent.explanation;
       videoTitle.innerText = todaysContent.title;
       videoLink.href = todaysContent.url;
-  }
-});
+    }
+  });
