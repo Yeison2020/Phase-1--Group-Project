@@ -19,11 +19,10 @@ let dateRange = document.getElementById("dateRange");
 
 dateRange.addEventListener("submit", (e) => {
   e.preventDefault();
+  thumbnailContainer.innerHTML = '';
   const firstDate = document.getElementById("begin").value;
   const seccondDate = document.getElementById("end").value;
-  fetch(
-    `https://api.nasa.gov/planetary/apod?start_date=${firstDate}&end_date=${seccondDate}&api_key=${apiKey}`
-  )
+  fetch(`https://api.nasa.gov/planetary/apod?start_date=${firstDate}&end_date=${seccondDate}&api_key=${apiKey}`)
     .then((resp) => resp.json())
     .then((data) => {
       console.log(data);
