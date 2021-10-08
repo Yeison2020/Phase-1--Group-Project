@@ -15,7 +15,7 @@ let videoLikes = document.getElementById("video-likesImgs").textContent;
 let likes = document.getElementById("likesImgs").textContent;
 let dateRange = document.getElementById("dateRange");
 
-const apiKey = "QRGi2r3XlHiGSpllFrbp6oSEiPxfoBG6pZKn9VKl";
+
 
 dateRange.addEventListener("submit", (e) => {
   e.preventDefault();
