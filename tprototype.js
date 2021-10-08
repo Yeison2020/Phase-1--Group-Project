@@ -79,8 +79,12 @@ makeThumbnail = (obj) => {
       imageTitle.innerText = obj.title;
       imageDescription.innerText = obj.explanation;
       imageLink.href = obj.hdurl;
+      //let likes = document.getElementById("likesImgs").textContent;
+      let string = 0;
+      likes = document.getElementById(
+        "likesImgs"
+      ).textContent = `${string} Likes`;
       document.getElementById("commentContainer").innerHTML = "";
-      document.getElementById("likesImgs").textContent = "0 Likes";
     } else {
       imageDisplay.style.display = "none";
       videoDisplay.style.display = "block";
@@ -88,8 +92,11 @@ makeThumbnail = (obj) => {
       videoDescription.innerText = obj.explanation;
       videoTitle.innerText = obj.title;
       videoLink.href = obj.url;
+      let string = 0;
+      videoLikes = document.getElementById(
+        "video-likesImgs"
+      ).textContent = `${string} Likes`;
       document.getElementById("videoCommentContainer").innerHTML = "";
-      document.getElementById("video-likesImgs").textContent= "0 Likes";
     }
   });
 };

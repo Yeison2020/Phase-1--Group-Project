@@ -1,18 +1,30 @@
 body {
-  background-color: #5c7aea;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(50, 105, 168, 0.4),
+    rgba(50, 93, 168, 0.9)
+  );
 }
 
 h1 {
   margin-left: 10px;
   padding-top: 5px;
   margin-top: 60px;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Lato" sans-serif;
+  /* font-family: "Josefin Sans", sans-serif; */
 }
 p {
   text-align: justify;
-  line-height: 1;
+  line-height: 1.8;
   max-width: 80%;
   margin: auto;
+  letter-spacing: 1.5;
+  font-size: 19px;
+  font-family: "Noto Serif", serif;
+}
+
+header {
+  margin-bottom: -10px;
 }
 
 #comments {
@@ -27,6 +39,7 @@ h3 {
   text-align: center;
   padding-bottom: 10px;
   padding-top: 10px;
+  font-family: "Noto Serif", serif;
 }
 
 #imageDescription {
@@ -45,7 +58,7 @@ h3 {
     transform: translateX(-100px);
   }
   80% {
-    transform: translateX(10px);
+    transform: translateX(20px);
   }
 
   100% {
